@@ -106,8 +106,8 @@
 
         <h2>JavaScript XHR AJAX REST Client</h2>
         <p>
-            Welcome to <cite>good old</cite>, <cite>classic</cite>, <cite>pure</cite> JavaScript XHR AJAX REST client.
-            It also processes the result XML DOM to HTML DOM.
+            Welcome to <cite>good old</cite>, <cite>classic</cite>, <cite>pure</cite> JavaScript XHR AJAX REST client or
+            SPA -- (Single Page Application)! It processes the API call result XML DOM to HTML DOM using simple table.
         </p>
 
         <button onclick="getPrimes()">Get Primes</button>
@@ -131,7 +131,7 @@
 
         <fieldset style="margin-top: 20px">
             <legend>cURL Debug</legend>
-            <p>You may try these curl rest calls from console.</p>
+            <p>You may try these curl rest calls from your terminal. Adjust base URL <code>localhost:8080</code> accordingly.</p>
             <code>curl -i -sS "http://localhost:8080/vanilla-one/rest/prime/simple"</code>
             <br/>
             <code>curl -i -sS "http://localhost:8080/vanilla-one/rest/prime/getPrimes"</code>
@@ -139,6 +139,8 @@
             <code>curl -i -sS -H "Accept: application/xml" "http://localhost:8080/vanilla-one/rest/prime/getPrimes"</code>
             <br/>
             <code>curl -i -sS -H "Accept: application/json" "http://localhost:8080/vanilla-one/rest/prime/getPrimes"</code>
+            <br/>
+            <code>curl -s -H "Accept: application/json" "http://localhost:8080/vanilla-one/rest/prime/getPrimes" | jq</code>
         </fieldset>
     </div>
 </body>

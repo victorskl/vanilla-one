@@ -3,11 +3,11 @@ package com.sankholin.views;
 import com.sankholin.service.IManagedTestService;
 import com.sankholin.service.ITestService;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
-import javax.inject.Inject;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import jakarta.faces.bean.ManagedBean;
+import jakarta.faces.bean.ManagedProperty;
+import jakarta.inject.Inject;
 
 @ManagedBean
 public class ManagedView {

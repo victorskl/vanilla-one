@@ -38,10 +38,9 @@
                         <f:validateLength maximum="20"/>
                     </p:inputText>
 
-                    <p:editor id="content" value="#{primeView.prime.content}" required="true" width="600"
-                        controls="bold italic underline strikethrough font size style color highlight bullets numbering source">
+                    <p:textEditor id="content" value="#{primeView.prime.content}" required="true">
                         <f:validateLength maximum="200"/>
-                    </p:editor>
+                    </p:textEditor>
 
                     <f:facet name="footer">
                         <p:commandButton value="Save" action="#{primeView.process}" update="growl, tblPrime, message, content" oncomplete="PF('dlgAddPrime').hide();">

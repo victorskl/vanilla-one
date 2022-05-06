@@ -4,14 +4,19 @@
         xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
     <h:head>
-        <title>Dependency Injection (DI) in JSF 2.0</title>
+        <title>Dependency Injection (DI) in JSF 3.0</title>
     </h:head>
 
     <h:body>
-        <h2>Dependency Injection (DI) in JSF 2.0</h2>
+        <fieldset>
+            <legend>Deprecated</legend>
+            Note: <code>@ManagedBean</code> is annotated deprecation in JSF 3.0. This is probably in favour of CDI.
+        </fieldset>
+
+        <h2>Dependency Injection (DI) in JSF 3.0</h2>
 
         <ul>
-            <li>In JSF 2.0, without depending extra DI middleware (Spring, CDI, Guice, ...), <code>@ManagedProperty</code> annotation can be used as a dependency injection (DI).</li>
+            <li>In JSF 3.0, without depending extra DI middleware (Spring, CDI, Guice, ...), <code>@ManagedProperty</code> annotation can be used as a dependency injection (DI).</li>
             <li>In this example, Service layer <code>ManagedTestService</code> is managed by JSF <code>@ManagedBean</code>.</li>
             <li>And <code>ManagedTestService</code> is injected into <code>ManagedView</code> backing bean using <code>@ManagedProperty</code>.</li>
             <li><code>@ManagedProperty</code> is a setter injection and required setter accessor on a calling bean.</li>

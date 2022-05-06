@@ -1,24 +1,18 @@
-# Purpose
-Explore JSF for web MVC, CDI for service layer and JAX-RS for RESTful web service from JavaEE. 
+# vanilla-one
+
+Explore JSF for Web MVC, CDI for service layer and JAX-RS for RESTful web service from JavaEE. 
 
 ## Technology Stack
 
 * JSF - Mojarra
 * CDI - Weld
-* JAX-RS - RESTEasy using JAXB for XML and Jettison for JSON
+* JAX-RS - RESTEasy using JAXB for XML and Jackson2 for JSON
 
 ## Frontend Frameworks
 
 * PrimeFaces
-* _Classic_ [JavaScript XHR AJAX REST Client](https://github.com/victorskl/vanilla/blob/master/vanilla-one/src/main/webapp/restClient.html)
-
-## Functional Focus
-
-* Layout Capability
-* Form Binding
-* Validation
-* i18n
+* _Classic_ [JavaScript XHR AJAX REST Client](src/main/webapp/restClient.html)
 
 ## Demo
 
-* http://cloud.sankholin.com/vanilla-one
+* https://cloud.sankholin.com/vanilla-one

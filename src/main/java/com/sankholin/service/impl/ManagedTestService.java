@@ -1,6 +1,6 @@
 package com.sankholin.service.impl;
 
-import javax.faces.bean.ManagedBean;
+import jakarta.faces.bean.ManagedBean;
 
 import com.sankholin.service.IManagedTestService;
 
