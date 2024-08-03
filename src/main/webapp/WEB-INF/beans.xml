@@ -9,6 +9,12 @@
     15.6. Packaging and deployment - 15.6.1. Explicit bean archive, 15.6.2. Implicit bean archive
     https://docs.jboss.org/weld/reference/latest/en-US/html/ee.html#packaging-and-deployment
 -->
+
+<!--
+    Migration to CDI 4 - See "empty beans.xml discovery mode"
+    https://docs.jboss.org/weld/reference/latest-5.1/en-US/html_single/#_empty_beans_xml_discovery_mode
+-->
+
 <beans xmlns="https://jakarta.ee/xml/ns/jakartaee"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee

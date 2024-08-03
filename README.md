@@ -1,6 +1,6 @@
 # vanilla-one
 
-Explore JSF for Web MVC, CDI for service layer and JAX-RS for RESTful web service from JavaEE. 
+Explore JSF for Web MVC, CDI for service layer and JAX-RS for RESTful web service from Jakarta EE.
 
 ## Technology Stack
 
