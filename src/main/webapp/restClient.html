@@ -40,17 +40,17 @@
     </style>
 
     <script>
-        var ajax = function(url, successHandler, errorHandler) {
-            var xhr = new XMLHttpRequest();
+        const ajax = function(url, successHandler, errorHandler) {
+            let xhr = new XMLHttpRequest();
             url = url+'?t='+new Date().getTime(); //IE ajax no cache
             xhr.open('GET', url, true);
             xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
             xhr.onreadystatechange = function() {
-                var status;
-                var data;
-                if (xhr.readyState == 4) {
+                let status;
+                let data;
+                if (xhr.readyState === 4) {
                     status = xhr.status;
-                    if (status == 200) {
+                    if (status === 200) {
                         //console.log(xhr.responseText);
                         //console.log(xhr.responseXML);
                         data = xhr.responseXML;
@@ -64,18 +64,18 @@
         };
 
         function getPrimes() {
-            var spinner = document.getElementById('spinner');
+            let spinner = document.getElementById('spinner');
             spinner.style.display = 'block';
-            var primeDataTable = document.getElementById('primeDataTable');
-            var tbody = document.createElement('tbody');
+            let primeDataTable = document.getElementById('primeDataTable');
+            let tbody = document.createElement('tbody');
             ajax('rest/prime/getPrimes',
                     function(xmlData) {
-                        var primes = xmlData.getElementsByTagName('prime');
+                        let primes = xmlData.getElementsByTagName('prime');
                         //console.log(primes.length);
-                        for (var i = 0; i < primes.length; i++) {
-                            var row = document.createElement('tr');
+                        for (let i = 0; i < primes.length; i++) {
+                            let row = document.createElement('tr');
 
-                            var td = document.createElement('td');
+                            let td = document.createElement('td');
                             td.appendChild(document.createTextNode(primes[i].getElementsByTagName('id')[0].childNodes[0].nodeValue));
                             row.appendChild(td);
 
