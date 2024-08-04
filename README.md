@@ -13,6 +13,20 @@ Explore JSF for Web MVC, CDI for service layer and JAX-RS for RESTful web servic
 * PrimeFaces
 * _Classic_ [JavaScript XHR AJAX REST Client](src/main/webapp/restClient.html)
 
-## Demo
+## Docker
 
-* https://cloud.sankholin.com/vanilla-one
+```
+docker build -t vanilla-one -f Dockerfile .
+```
+
+```
+docker run -it --rm -p 8080:8080 --name vanilla-one vanilla-one
+```
+
+```
+open -a "Google Chrome" http://localhost:8080/vanilla-one
+```
+
+```
+curl -s -H "Accept: application/json" "http://localhost:8080/vanilla-one/rest/prime/getPrimes" | jq
+```
