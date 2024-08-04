@@ -1,4 +1,4 @@
-package com.sankholin.model;
+package com.sankholin.primeapp.model;
 
 import jakarta.xml.bind.annotation.XmlRootElement;
 

@@ -1,6 +1,4 @@
-package com.sankholin.views;
-
-import com.sankholin.service.ITestService;
+package com.sankholin.baseapp;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
@@ -10,21 +8,21 @@ import jakarta.inject.Named;
 
 @Named
 @RequestScoped
-public class TestView {
+public class BaseView {
 
     @Inject
-    private ITestService testService;
+    private BaseService baseService;
 
     private String message;
 
     @PostConstruct
     public void init() {
-        message = "Hello from CDI discovered JSF backing bean! Calling injected testService: " + testService.add(2, 3);
+        message = "Hello from CDI discovered JSF bean! Calling injected BaseService: " + baseService.add(2, 3);
     }
 
     @PreDestroy
     public void destroy() {
-        System.out.println("\tTest view will be destroyed right away because of @RequestScoped!");
+        System.out.println("\tView will be destroyed right away because of @RequestScoped!");
     }
 
     public String getMessage() {

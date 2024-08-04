@@ -1,7 +1,4 @@
-package com.sankholin.service.impl;
-
-import com.sankholin.model.Prime;
-import com.sankholin.service.IPrimeService;
+package com.sankholin.primeapp.model;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.ApplicationScoped;
@@ -10,7 +7,7 @@ import java.util.List;
 import java.util.UUID;
 
 @ApplicationScoped
-public class PrimeService implements IPrimeService {
+public class PrimeServiceImpl implements PrimeService {
 
     private List<Prime> primes;
 

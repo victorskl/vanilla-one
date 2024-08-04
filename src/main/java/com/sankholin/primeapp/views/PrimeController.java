@@ -1,7 +1,7 @@
-package com.sankholin.views;
+package com.sankholin.primeapp.views;
 
-import com.sankholin.model.Prime;
-import com.sankholin.service.IPrimeService;
+import com.sankholin.primeapp.model.Prime;
+import com.sankholin.primeapp.model.PrimeService;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
@@ -16,10 +16,10 @@ import java.util.UUID;
 
 @Named
 @ViewScoped
-public class PrimeView implements Serializable {
+public class PrimeController implements Serializable {
 
     @Inject
-    private IPrimeService primeService;
+    private PrimeService primeService;
 
     private List<Prime> primes;
 

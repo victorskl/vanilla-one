@@ -1,10 +1,10 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:h="http://xmlns.jcp.org/jsf/html"
-    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-    xmlns:f="http://xmlns.jcp.org/jsf/core"
-    xmlns:p="http://primefaces.org/ui"
-    xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
-    template="WEB-INF/layout/page.xhtml">
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+                template="WEB-INF/layout/page.xhtml">
 
     <ui:define name="main">
 
@@ -15,7 +15,7 @@
                 <p:commandButton value="Add" type="button" onclick="PF('dlgAddPrime').show();"/>
             </h:form>
 
-            <p:dataTable id="tblPrime" var="prime" value="#{primeView.primes}">
+            <p:dataTable id="tblPrime" var="prime" value="#{primeController.primes}">
                 <p:column headerText="Id">
                     <h:outputText value="#{prime.id}"/>
                 </p:column>
@@ -31,19 +31,23 @@
 
         </h:panelGrid>
 
-        <p:dialog appendTo="@(body)" header="Add New" modal="true" widgetVar="dlgAddPrime" closeOnEscape="true" closable="true" resizable="false">
+        <p:dialog appendTo="@(body)" header="Add New" modal="true" widgetVar="dlgAddPrime" closeOnEscape="true"
+                  closable="true" resizable="false">
             <h:form>
                 <h:panelGrid>
-                    <p:inputText id="message" value="#{primeView.prime.message}" pt:placeholder="short message..." required="true">
+                    <p:inputText id="message" value="#{primeController.prime.message}" pt:placeholder="short message..."
+                                 required="true">
                         <f:validateLength maximum="20"/>
                     </p:inputText>
 
-                    <p:textEditor id="content" value="#{primeView.prime.content}" required="true">
+                    <p:textEditor id="content" value="#{primeController.prime.content}" required="true">
                         <f:validateLength maximum="200"/>
                     </p:textEditor>
 
                     <f:facet name="footer">
-                        <p:commandButton value="Save" action="#{primeView.process}" update="growl, tblPrime, message, content" oncomplete="PF('dlgAddPrime').hide();">
+                        <p:commandButton value="Save" action="#{primeController.process}"
+                                         update="growl, tblPrime, message, content"
+                                         oncomplete="PF('dlgAddPrime').hide();">
                             <p:resetInput target="message, content"/>
                         </p:commandButton>
                     </f:facet>

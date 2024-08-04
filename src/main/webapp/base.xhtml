@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
-        xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
     <h:head>
         <title>JSF and CDI</title>
@@ -11,8 +11,8 @@
         <h2>JSF and CDI</h2>
 
         <p>
-            In this example, JSF backing bean <code>TestView</code> is managed by JavaEE CDI using annotation <code>@Named</code>
-            and putting it in CDI request context scope <code>@RequestScoped</code>.
+            In this example, JSF backing bean <code>BaseView</code> is managed by JakartaEE CDI using
+            annotation <code>@Named</code> and putting it in CDI request scope <code>@RequestScoped</code>.
         </p>
 
         <h:panelGrid columns="2">
@@ -20,7 +20,7 @@
                 <h:outputText value="Init Message:"/>
             </h:column>
             <h:column>
-                <pre>#{testView.message}</pre>
+                <pre>#{baseView.message}</pre>
             </h:column>
         </h:panelGrid>
 

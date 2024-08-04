@@ -1,7 +1,7 @@
-package com.sankholin.rest;
+package com.sankholin.primeapp.rest;
 
-import com.sankholin.model.Prime;
-import com.sankholin.service.IPrimeService;
+import com.sankholin.primeapp.model.Prime;
+import com.sankholin.primeapp.model.PrimeService;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class PrimeEndpoint {
 
     @Inject
-    private IPrimeService primeService;
+    private PrimeService primeService;
 
     @GET
     @Path("/simple")
